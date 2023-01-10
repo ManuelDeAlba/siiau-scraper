@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 import cheerio from 'cheerio';
 
-import { convertirHora } from "./utils.js";
+import { convertirHora } from "./utils.mjs";
 
 async function obtenerCiclos(){
     let res = await fetch(`http://consulta.siiau.udg.mx/wco/sspseca.forma_consulta`);
