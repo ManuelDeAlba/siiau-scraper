@@ -1,7 +1,7 @@
-import fetch from 'node-fetch';
-import cheerio from 'cheerio';
+const fetch = require("node-fetch");
+const cheerio = require("cheerio");
 
-import { convertirHora } from "./utils.js";
+const { convertirHora } = require("./utils.js");
 
 async function obtenerCiclos(){
     let res = await fetch(`http://consulta.siiau.udg.mx/wco/sspseca.forma_consulta`);
@@ -142,7 +142,7 @@ async function obtenerClases({ciclo, centro, carrera, clave}){
     return clases;
 }
 
-export {
+module.exports = {
     obtenerCiclos,
     obtenerCentros,
     obtenerCarrerasPorCentro,

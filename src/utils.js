@@ -6,6 +6,6 @@ function convertirHora(hora){
     return res;
 }
 
-export {
+module.exports = {
     convertirHora
 }
